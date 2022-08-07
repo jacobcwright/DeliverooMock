@@ -17,6 +17,7 @@ import {
   AdjustmentsIcon,
 } from "react-native-heroicons/outline";
 import Categories from "../components/Categories";
+import FeaturedRow from "../components/FeaturedRow";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -65,6 +66,23 @@ const HomeScreen = () => {
         {/* Categories */}
         <Categories />
         {/* Featured Rows */}
+        <FeaturedRow
+          title="Featured"
+          description="Discover new restaurants"
+          id="1"
+        />
+
+        <FeaturedRow
+          title="Discounts"
+          description="Dine on a dime with these discounts"
+          id="2"
+        />
+
+        <FeaturedRow
+          title="Offers near you"
+          description="Support local businesses"
+          id="3"
+        />
       </ScrollView>
     </SafeAreaView>
   );
