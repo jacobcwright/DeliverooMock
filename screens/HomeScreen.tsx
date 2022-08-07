@@ -1,4 +1,11 @@
-import { Image, SafeAreaView, StyleSheet, Text, View } from "react-native";
+import {
+  Image,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+} from "react-native";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { useLayoutEffect } from "react";
@@ -39,6 +46,17 @@ const HomeScreen = () => {
         </View>
         <UserIcon size={36} color="#00CCBB" style={{ margin: 4 }} />
       </View>
+
+      <View style={styles.search}>
+        <View style={styles.searchBar}>
+          <SearchIcon size={20} color="#00CCBB" style={{ marginRight: 8 }} />
+          <TextInput
+            placeholder="Search for Restaurants"
+            keyboardType="default"
+          />
+        </View>
+        <AdjustmentsIcon size={32} color="#00CCBB" />
+      </View>
     </SafeAreaView>
   );
 };
@@ -46,6 +64,20 @@ const HomeScreen = () => {
 export default HomeScreen;
 
 const styles = StyleSheet.create({
+  search: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingBottom: 8,
+    marginHorizontal: 4,
+    justifyContent: "center",
+  },
+  searchBar: {
+    flexDirection: "row",
+    marginLeft: 8,
+    flex: 1,
+    backgroundColor: "#F5F5F5",
+    padding: 12,
+  },
   safe: {
     backgroundColor: "white",
     paddingTop: 20,
