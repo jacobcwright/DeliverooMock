@@ -1,6 +1,7 @@
 import {
   Image,
   SafeAreaView,
+  ScrollView,
   StyleSheet,
   Text,
   TextInput,
@@ -15,6 +16,7 @@ import {
   SearchIcon,
   AdjustmentsIcon,
 } from "react-native-heroicons/outline";
+import Categories from "../components/Categories";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -57,6 +59,13 @@ const HomeScreen = () => {
         </View>
         <AdjustmentsIcon size={32} color="#00CCBB" />
       </View>
+
+      {/* Body */}
+      <ScrollView contentContainerStyle={{}}>
+        {/* Categories */}
+        <Categories />
+        {/* Featured Rows */}
+      </ScrollView>
     </SafeAreaView>
   );
 };
